@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-
+// Route:view is to return static view (blade.php file)
 Route::view('/about', 'about');
 Route::view('/contact', 'contact');
