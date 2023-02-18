@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
+
 // Route:view is to return static view (blade.php file)
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
